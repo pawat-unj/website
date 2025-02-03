@@ -101,32 +101,6 @@ header {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Light/Dark Mode Toggle - Separate Bar */
-.toggle-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    padding: 8px 15px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-#theme-toggle {
-    border: none;
-    cursor: pointer;
-    background: #007bff;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 10px;
-    transition: 0.3s;
-}
-
-#theme-toggle:hover {
-    background: #0056b3;
-}
 
 /* Move Navigation Next to Toggle */
 .header-nav {
@@ -519,7 +493,7 @@ body.light-mode .contact-me span:nth-child(4) {
 #gallery {
     width: 100%;
     min-height: 60vh;
-    padding: 80px 40px;
+    padding: 20px 40px;
     text-align: center;
     overflow: hidden;
 }
@@ -744,12 +718,16 @@ body.light-mode .contact-me span:nth-child(4) {
 
     .nav-links {
         flex-direction: row; /* Stack nav items */
-        gap: 10px;
+        gap: 2px;
     }
 
     .nav-links a {
-        font-size: 1rem; /* Adjust text size */
+        font-size: 0.9rem; /* Adjust text size */
         padding: 8px;
+    }
+
+    .header-nav {
+        gap: 2px;
     }
 
     h2 {
@@ -780,19 +758,16 @@ body.light-mode .contact-me span:nth-child(4) {
         text-align: center;
     }
 
-    /* Gallery - Make images smaller for mobile */
-    /* .gallery-scroll {
-        display: flex;
-        flex-direction: column; 
-        gap: 10px;
+    #gallery {
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    .gallery-row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    .gallery-intro {
+        padding-left: 40px;
+        padding-right: 40px;
     }
-    */
+
     .gallery-row img {
         /* width: 100%;  */
         max-height: 150px;
