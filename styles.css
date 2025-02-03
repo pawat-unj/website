@@ -241,7 +241,7 @@ section:not(:last-of-type) {
 /* About Section Styling */
 #about {
     position: relative; /* Keep it relative to allow natural flow */
-    top: -50px;
+    top: 0px;
     left: 0;
     width: 150%; /* Full width */
     min-height: 100vh; /* Full viewport height */
@@ -571,7 +571,7 @@ body.light-mode .contact-me span:nth-child(4) {
 /* Instead of grid-column-gap, apply margin to images */
 .gallery-scroll img {
     height: auto;
-    max-height: 300px; /* Adjust based on preference */
+    max-height: 250px; /* Adjust based on preference */
     width: auto;
     border-radius: 10px;
     object-fit: contain;
