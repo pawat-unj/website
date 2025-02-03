@@ -1,0 +1,733 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    transition: background 0.3s, color 0.3s;
+    padding-top: 0;
+    background: #121212;
+    color: white;
+}
+
+/* Light & Dark Theme */
+body.light-mode {
+    background: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+/* Light Mode Header */
+body.light-mode header {
+    background: rgba(255, 255, 255, 0.70);
+    color: black;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode Header */
+body.dark-mode header {
+    background: rgba(18, 18, 18, 0.70);
+    color: white;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+p a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Makes it match the normal text color */
+    font-weight: bold; /* Makes it bold */
+}
+
+/* Header Layout */
+
+/* header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.0); 
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px 30px;
+} */
+
+/* Floating Navigation Bar */
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    justify-content: center;
+    gap: 15px;
+    width: auto; /* Adjust width to wrap around content */
+    white-space: nowrap;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 10px;
+}
+
+/* Highlight Active Section */
+.nav-links a.active {
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Light/Dark Mode Toggle - Separate Bar */
+.toggle-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 8px 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#theme-toggle {
+    border: none;
+    cursor: pointer;
+    background: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+#theme-toggle:hover {
+    background: #0056b3;
+}
+
+/* Move Navigation Next to Toggle */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #053160;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 1.2rem; /* Make text slightly larger */
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #205ea0;
+}
+
+/* Make Elements Fill the Screen */
+section {
+    width: 100%;
+    max-width: 100%;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Ensure Sections Span Full Width */
+section:not(:last-of-type) {
+    /* border-bottom: 1px solid #ccc; */
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+
+/* About Section Styling */
+#about {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, rgba(28, 119, 189, 1), rgba(0, 180, 216, 0.9), rgba(72, 202, 228, 0.8));
+    transition: background 0.1s ease-out;
+    margin-top: -80px; /* Moves the About section up to remove any space */
+    padding-top: 120px; /* Ensures content inside About doesn't get too close to the top */
+}
+
+/* Light Mode - Black Text */
+body.light-mode #about {
+    color: black;
+}
+
+/* Dark Mode - White Text */
+body.dark-mode #about {
+    color: white;
+}
+
+.about-content {
+    max-width: 800px;
+}
+
+.about-content h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    /* color: rgba(255, 255, 255, 0.9); */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initial State: Hidden */
+.about-content h2,
+.about-content h3,
+.about-content p {
+    opacity: 0;
+}
+
+/* First Text (Hi there, I'm Ice.) - Immediate Fade-In */
+.about-content h2 {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Rest of the Text - Delayed Fade-In */
+.about-content h3 {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 1.25s;
+}
+
+.about-content p {
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 3.5s;
+}
+
+/* Work Section Layout */
+/* Work Section Layout - Better Spacing */
+#work {
+    width: 100%;
+    min-height: 100vh; /* Match About section height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px; /* More padding */
+    text-align: left;
+}
+
+/* Container - Similar to About Section */
+.work-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px; /* Increase spacing between text and button */
+}
+
+/* Left Side: Text */
+.work-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.work-text h2 {
+    font-size: 3rem; /* Match About section */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.work-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Right Side: Resume Button */
+.work-resume {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* .resume-btn {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 12px 18px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.resume-btn:hover {
+    background: #0056b3;
+} */
+
+/* Resume Button - Matches Contact Button */
+#resume-button {
+    display: inline-block;
+    width: 250px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Fix border visibility */
+.contact-me {
+    position: relative;
+    display: inline-block;
+    padding: 12px 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid white; /* Default for dark mode */
+    color: white; /* Default for dark mode */
+}
+
+/* Ensure it adapts for Light Mode */
+body.light-mode .contact-me {
+    border: 2px solid black; /* Dark border in light mode */
+    color: black; /* Dark text in light mode */
+}
+
+/* Hover Effect - Glowing Border */
+.contact-me:hover {
+    background-color: white;
+    color: #010d1b;
+    box-shadow: 0 0 10px white, 0 0 40px white, 0 0 80px white;
+    transition-delay: 0.6s;
+}
+
+/* Light Mode Hover Effect */
+body.light-mode .contact-me:hover {
+    background-color: white;
+    color: black;
+    
+}
+
+/* Border Hover Animation */
+.contact-me span {
+    position: absolute;
+    display: block;
+}
+
+.contact-me span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, white);
+}
+
+body.light-mode .contact-me span:nth-child(1) {
+    background: linear-gradient(90deg, transparent, black);
+}
+
+.contact-me:hover span:nth-child(1) {
+    left: 100%;
+    transition: 0.6s;
+}
+
+.contact-me span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, white);
+}
+
+body.light-mode .contact-me span:nth-child(3) {
+    background: linear-gradient(270deg, transparent, black);
+}
+
+.contact-me:hover span:nth-child(3) {
+    right: 100%;
+    transition: 0.6s;
+    transition-delay: 0.3s;
+}
+
+.contact-me span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, white);
+}
+
+body.light-mode .contact-me span:nth-child(2) {
+    background: linear-gradient(180deg, transparent, black);
+}
+
+.contact-me:hover span:nth-child(2) {
+    top: 100%;
+    transition: 0.6s;
+    transition-delay: 0.15s;
+}
+
+.contact-me span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, white);
+}
+
+body.light-mode .contact-me span:nth-child(4) {
+    background: linear-gradient(360deg, transparent, black);
+}
+
+.contact-me:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 0.6s;
+    transition-delay: 0.45s;
+}
+
+/* Gallery Section Layout */
+#gallery {
+    width: 100%;
+    min-height: 60vh;
+    padding: 80px 40px;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Intro Text */
+.gallery-intro {
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.gallery-intro h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.gallery-intro p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Scrollable Gallery */
+
+
+.gallery-container {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.gallery-scroll {
+    display: grid;
+    grid-template-rows: repeat(2, auto); /* Creates exactly two rows */
+    grid-auto-flow: column; /* Ensures horizontal scrolling */
+    gap: 20px; /* Controls space between rows */
+    justify-content: start;
+    align-items: start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    white-space: nowrap;
+}
+
+/* Instead of grid-column-gap, apply margin to images */
+.gallery-scroll img {
+    height: auto;
+    max-height: 300px; /* Adjust based on preference */
+    width: auto;
+    border-radius: 10px;
+    object-fit: contain;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease-in-out;
+    
+    margin-right: 30px; /* Increases spacing between images in the same row */
+}
+
+/* Hover Effect */
+.gallery-scroll img:hover {
+    transform: scale(1.05);
+}
+
+/* Hide scrollbar */
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* See More Button */
+.gallery-see-more {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.see-more-btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+
+.see-more-btn .arrow {
+    margin-left: 10px;
+    font-size: 1.8rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.see-more-btn:hover {
+    color: #0056b3;
+}
+
+.see-more-btn:hover .arrow {
+    transform: translateX(5px); /* Arrow moves slightly right on hover */
+}
+
+/* Contact Section */
+#contact {
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: transparent;
+}
+
+.contact-container {
+    max-width: 600px;
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Contact Icons */
+.contact-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.contact-icon:hover {
+    transform: scale(1.2);
+    color: #0056b3;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .gallery-scroll {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-scroll img {
+        max-height: 250px; /* Reduces image size for smaller screens */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .work-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .work-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .work-resume {
+        justify-content: center;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    header, section {
+        text-align: center;
+    }
+    .about-content {
+        text-align: center;
+    }
+
+    .about-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+

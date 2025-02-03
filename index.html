@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Ice</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        header {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+        section {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            header, section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- <h1>Ice Unjitwattana</h1> -->
+        <div class="header-right">
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <!-- <li><a href="#travel">Travel</a></li> -->
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <label class="toggle-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+    
+    <section id="about">
+        <div class="about-content">
+            <h2>Hi there, I'm Ice.</h2>
+            <h3>Full-time engineer, part-time adventure junkie</h3>
+            <p>
+                I enjoy solving complex puzzles, spending time outdoors, and getting lost. Some of my interests are computer architecture and systems, pedagogy, backcountry backpacking, and photography.
+                <!-- My main interests are <strong>compilers</strong>, <strong>computer architecture</strong>, and <strong>distributed systems</strong>. -->
+            </p>
+            <p>
+                <!-- I enjoy solving complex puzzles, collaborating with diverse teammates, and turning abstract ideas into real-world solutions.  -->
+                Keep scrolling to learn more about me.
+            </p>
+        </div>
+    </section>
+
+    <section id="work">
+        <div class="work-container">
+            <div class="work-text">
+                <h2 id="work-title"></h2>
+                <p>
+                    I'm currently a full-time engineer on the silicon team at  . Before that, I was studying Electrical Engineering and Computer Science at UC Berkeley. To see my full work experience, please download my resume. 
+                </p>
+                <br>
+                <p>
+                    I also enjoy teaching as well as tinkering with random side projects. If you have something in mind and would like to collaborate, please don't hesitate to <a href="#contact">reach out</a>.
+                </p>
+            </div>
+            <div id="resume-button" class="contact-button">
+                <a href="assets/resume.pdf" download="ice_resume.pdf" class="contact-me">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Download Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <div class="gallery-intro">
+            <h2>My Photography</h2>
+            <p>
+                <!-- Capturing moments through my lens has always been a passion of mine. 
+                I love experimenting with light, composition, and movement to tell unique stories. -->
+                I almost always bring a camera with me on my trips. Photos shown here are shot on a variety of cameras from film point-and-shoots to drones to mirrorless full frames.
+            </p>
+        </div>
+
+        <div class="gallery-container">
+            <div class="gallery-scroll">
+                <!-- Row 1 -->
+                <div class="gallery-row">
+                    <img src="assets/photos/hor1.jpeg" alt="Photo 1">
+                    <img src="assets/photos/ver1.jpeg" alt="Photo 4">
+                    <img src="assets/photos/ver2.jpeg" alt="Photo 5">
+                    <img src="assets/photos/hor2.jpeg" alt="Photo 2">
+                    <img src="assets/photos/ver6.jpeg" alt="Photo 5">
+                    <img src="assets/photos/hor3.jpeg" alt="Photo 3">
+                    <img src="assets/photos/hor6.jpeg" alt="Photo 3">
+                    <img src="assets/photos/ver8.jpeg" alt="Photo 5">
+                </div>
+        
+                <!-- Row 2 -->
+                <div class="gallery-row">
+                    <img src="assets/photos/ver4.jpeg" alt="Photo 6">
+                    <img src="assets/photos/hor4.jpeg" alt="Photo 2">
+                    <img src="assets/photos/hor5.jpeg" alt="Photo 3">
+                    <img src="assets/photos/ver3.jpeg" alt="Photo 6">
+                    <img src="assets/photos/hor7.jpeg" alt="Photo 3">
+                    <img src="assets/photos/ver5.jpeg" alt="Photo 6">
+                    <img src="assets/photos/hor8.jpeg" alt="Photo 3">
+                    <img src="assets/photos/ver7.jpeg" alt="Photo 5">
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-see-more">
+            <a href="snaps.html" class="see-more-btn">
+                <span>See More</span>
+                <span class="arrow">→</span>
+            </a>
+        </div>
+        
+        <!-- <div class="gallery-container">
+            <div class="gallery-scroll">
+                
+                
+            </div>
+        </div> -->
+    </section>
+
+    <!-- <section id="travel">
+        <h2>Travel</h2>
+        <p>Bla bla bla</p>
+    </section> -->
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Get in Touch</h2>
+            <p>Feel free to reach out via email or follow me on social media.</p>
+            <div class="contact-icons">
+                <a href="mailto:pawat.unj@gmail.com" class="contact-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/pawat-unj/" target="_blank" class="contact-icon" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/pawat-unj" target="_blank" class="contact-icon" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/icepwt" target="_blank" class="contact-icon" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
