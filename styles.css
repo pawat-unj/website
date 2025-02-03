@@ -7,7 +7,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    transition: background 0.3s, color 0.3s;
+    transition: 0.3s, color 0.3s;
     padding-top: 0;
     background: #121212;
     color: white;
@@ -46,20 +46,6 @@ p a {
 
 /* Header Layout */
 
-/* header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    max-width: 100%;
-    background: rgba(255, 255, 255, 0.0); 
-    backdrop-filter: blur(5px);
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 20px 30px;
-} */
-
-/* Floating Navigation Bar */
 header {
     position: fixed;
     top: 20px;
@@ -69,34 +55,40 @@ header {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    padding: 10px 20px;
+    padding: 8px 12px; /* Reducing padding to make it snug */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     justify-content: center;
-    gap: 15px;
-    width: auto; /* Adjust width to wrap around content */
+    align-items: center;
+    gap: 8px; /* Reduce spacing between nav items */
+    width: auto;
+    min-width: min-content;
+    max-width: max-content;
     white-space: nowrap;
 }
 
+/* Adjust navigation links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 10px; /* Reduce space between nav items */
     margin: 0;
+    padding: 0;
 }
 
-.nav-links li {
-    display: inline;
-}
-
+/* Adjust navigation link styles */
 .nav-links a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1.2rem;
-    padding: 10px 15px;
+    font-size: 1rem; /* Slightly reduce font size */
+    padding: 6px 10px; /* Reduce padding inside links */
     transition: background 0.3s, color 0.3s;
-    border-radius: 10px;
+    border-radius: 8px; /* Round edges slightly */
+}
+
+.nav-links li {
+    display: inline;
 }
 
 /* Highlight Active Section */
@@ -129,7 +121,7 @@ header {
     color: white;
     padding: 8px 15px;
     border-radius: 10px;
-    transition: background 0.3s;
+    transition: 0.3s;
 }
 
 #theme-toggle:hover {
@@ -137,7 +129,7 @@ header {
 }
 
 /* Move Navigation Next to Toggle */
-.header-right {
+.header-nav {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -232,9 +224,9 @@ nav {
 
 /* Make Elements Fill the Screen */
 section {
-    width: 100%;
+    width: 100vw; /* Expands to fill the full window width */
     max-width: 100%;
-    padding: 60px 20px;
+    padding: 60px 5%; /* Reduces excessive padding */
     text-align: center;
 }
 
@@ -248,19 +240,28 @@ section:not(:last-of-type) {
 
 /* About Section Styling */
 #about {
-    width: 100%;
-    min-height: 100vh;
+    position: relative; /* Keep it relative to allow natural flow */
+    top: -50px;
+    left: 0;
+    width: 150%; /* Full width */
+    min-height: 100vh; /* Full viewport height */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: left;
     padding: 0;
     overflow: hidden;
-    position: relative;
     background: linear-gradient(135deg, rgba(28, 119, 189, 1), rgba(0, 180, 216, 0.9), rgba(72, 202, 228, 0.8));
-    transition: background 0.1s ease-out;
-    margin-top: -80px; /* Moves the About section up to remove any space */
-    padding-top: 120px; /* Ensures content inside About doesn't get too close to the top */
+    transition: 0.1s ease-out;
+    padding-top: 120px;
+}
+
+/* Remove any constraints from body and html */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Prevents unwanted horizontal scroll */
 }
 
 /* Light Mode - Black Text */
