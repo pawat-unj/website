@@ -123,3 +123,4 @@ document.addEventListener("DOMContentLoaded", () => {
         gallery.scrollLeft = scrollLeft - walk;
     });
 });
+

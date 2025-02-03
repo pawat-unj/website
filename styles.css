@@ -673,7 +673,7 @@ body.light-mode .contact-me span:nth-child(4) {
 
 
 /* Responsive */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .gallery-scroll {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
@@ -681,12 +681,12 @@ body.light-mode .contact-me span:nth-child(4) {
 
 @media (max-width: 768px) {
     .gallery-scroll img {
-        max-height: 250px; /* Reduces image size for smaller screens */
+        max-height: 250px; 
     }
-}
+} */
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .work-container {
         flex-direction: column;
         text-align: center;
@@ -700,10 +700,10 @@ body.light-mode .contact-me span:nth-child(4) {
     .work-resume {
         justify-content: center;
     }
-}
+} */
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     body {
         padding: 10px;
     }
@@ -724,6 +724,92 @@ body.light-mode .contact-me span:nth-child(4) {
 
     .about-content p {
         font-size: 1rem;
+    }
+} */
+
+/* Mobile-Friendly Styles */
+@media (max-width: 768px) {
+    /* Make sections fit the screen width */
+    section {
+        width: 100%;
+        padding: 40px 20px;
+        text-align: center; /* Center text for better readability */
+    }
+
+    /* Navbar adjustments */
+    header {
+        width: 90%; /* Make it responsive */
+        padding: 8px 10px;
+    }
+
+    .nav-links {
+        flex-direction: row; /* Stack nav items */
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 1rem; /* Adjust text size */
+        padding: 8px;
+    }
+
+    h2 {
+        font-size: 1.8rem !important;
+    }
+
+    /* About section tweaks */
+    #about {
+        flex-direction: column; /* Stack elements */
+        padding: 80px 20px;
+        text-align: left;
+    }
+
+
+    .about-content h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Work section */
+    .work-container {
+        flex-direction: column; /* Stack text and button */
+        gap: 20px;
+        text-align: center;
+    }
+
+    #resume-button {
+        width: 100%; /* Make button full width */
+        text-align: center;
+    }
+
+    /* Gallery - Make images smaller for mobile */
+    /* .gallery-scroll {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .gallery-row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    */
+    .gallery-row img {
+        /* width: 100%;  */
+        max-height: 150px;
+        /* object-fit: cover; */
+        -webkit-overflow-scrolling: touch;
+    } 
+
+    /* Contact section - Make icons larger */
+    .contact-icons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .contact-icon {
+        font-size: 3rem; /* Bigger icons for touch accessibility */
     }
 }
 
