@@ -106,7 +106,36 @@ header {
 .header-nav {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 5px; /* Reduce spacing between toggle and nav */
+}
+
+/* Theme Toggle Button */
+.theme-toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease-in-out;
+    color: var(--text-color);
+}
+
+/* Hover effect */
+.theme-toggle-container:hover {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+}
+
+/* Dark Mode */
+body.dark-mode .theme-toggle-container {
+    color: white;
+}
+
+/* Smooth icon transition */
+.theme-toggle svg {
+    transition: transform 0.3s ease-in-out;
 }
 
 /* Toggle Switch */
