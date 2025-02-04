@@ -493,7 +493,7 @@ body.light-mode .contact-me span:nth-child(4) {
 #gallery {
     width: 100%;
     min-height: 60vh;
-    padding: 20px 40px;
+    padding: 6% 40px;
     text-align: center;
     overflow: hidden;
 }
