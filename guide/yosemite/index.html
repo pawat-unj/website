@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yosemite National Park Guide</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">                
+                <li><a href="#transportation">Logistics</a></li>
+                <li><a href="#hiking">Day Adventures</a></li>
+                <li><a href="#backpacking">Extended Trips</a></li>
+                <li><a href="#backpacking">Gems</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle-container" onclick="toggleTheme()">
+            <div class="theme-toggle">
+                <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" width="24" height="24">
+                    <path id="theme-path" stroke-linecap="round" stroke-linejoin="round"
+                        d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z">
+                    </path>
+                </svg>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Ice's guide to getting lost in</h2>
+            <h1>Yosemite National Park</h1>
+            <!-- <p>Planning a visit to one of California's most popular destinations can be a daunting task. Worry not, this guide's got you covered. We'll walk you through everything, from how to get there to where to stay to all the fun things you can do. Regardless of whether you're a chill day hiker who stops a lot to smell the flowers or a hardcore backpacker looking for a multi-day adventure, Yosemite's got something for everyone.</p> -->
+            <!-- <p>Whether you're a chill day hiker who stops a lot to smell the flowers or a hardcore backpacker looking for a multi-day adventure, Yosemite's got something for everyone.</p> -->
+
+        </div>
+        <div class="scroll-down" onclick="scrollToSection('#info')"></div>
+    </section>
+    
+    <section id="info">
+        <h2>Important Information</h2>
+        <p>Details about permits, locations, and best times to visit.</p>
+    </section>
+
+    <section id="transportation">
+        <h2>Getting there</h2>
+        <p>Details about lodging inside and outside the park, plus drive-in campsites.</p>
+    </section>
+
+    <section id="accommodation">
+        <h2>Where to stay</h2>
+        <p>Details about lodging inside and outside the park, plus drive-in campsites.</p>
+    </section>
+
+    <section id="food">
+        <h2>Things to pack</h2>
+        <p>Where to eat, buy groceries, and what to prepare.</p>
+    </section>
+    
+    <section id="hiking">
+        <h2>Hiking Trails</h2>
+        <p>Interactive map coming soon!</p>
+    </section>
+
+    <section id="activities">
+        <h2>Other Activities</h2>
+        <p>Explore seasonal activities, ranger-led programs, and more.</p>
+    </section>
+    
+
+    <section id="backpacking">
+        <h2>Backpacking & Wilderness Camping</h2>
+        <p>Information on multi-night backpacking trails and campsite regulations.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Yosemite Guide</p>
+    </footer>
+    
+</body>
+</html>

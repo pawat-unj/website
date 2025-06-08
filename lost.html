@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost - Travel Plans</title>
+    <link rel="stylesheet" href="lost-styles.css">
+    <script defer src="lost-script.js"></script>
+</head>
+<body>
+    <!-- Password Protection -->
+    <div id="password-protect" class="password-overlay">
+        <div class="password-box">
+            <h2>Enter Password</h2>
+            <input type="password" id="password-input" placeholder="Password">
+            <button onclick="checkPassword()">Submit</button>
+            <p id="password-error" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Main Content (Hidden Until Password is Entered) -->
+    <main id="lost-content" style="display: none;">
+        <h1>Upcoming Travel Plans</h1>
+        <div class="travel-grid">
+            <div class="trip-card" onclick="alert('Trip details coming soon!')">
+                <img src="placeholder1.jpg" alt="Trip 1">
+                <h3>Destination One</h3>
+                <p>Dates: TBD</p>
+            </div>
+            <div class="trip-card" onclick="alert('Trip details coming soon!')">
+                <img src="placeholder2.jpg" alt="Trip 2">
+                <h3>Destination Two</h3>
+                <p>Dates: TBD</p>
+            </div>
+            <div class="trip-card" onclick="alert('Trip details coming soon!')">
+                <img src="placeholder3.jpg" alt="Trip 3">
+                <h3>Destination Three</h3>
+                <p>Dates: TBD</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
